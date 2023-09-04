@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo claro para mayor legibilidad */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Mantener la barra de navegación fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurar que esté por encima del contenido */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centrar las opciones del menú */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último elemento */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px; /* Tamaño de fuente ligeramente aumentado */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 60px 20px; /* Agregar espacio superior para evitar superposición con la barra de navegación */
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Mantener el footer fijo en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurar que esté por encima del contenido */
+}
+
+/* Estilos para el menú de Catálogo */
+.catalogo-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.catalogo-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.catalogo-dropdown:hover .catalogo-content {
+    display: block;
+}
+
+.catalogo-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.catalogo-content a:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para las imágenes del catálogo */
+.imagen-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar horizontalmente las imágenes */
+    align-items: flex-start; /* Centrar verticalmente las imágenes contra el margen superior */
+    margin-top: 5px; /* Pequeño margen superior para distinguir el título de las imágenes */
+    height: 100vh; /* Altura igual a la altura de la ventana del navegador */
+}
+
+.imagen-catalogo {
+    max-width: 40%; /* Máximo ancho del 40% de la pantalla */
+    max-height: 50vh; /* Máximo alto del 50% de la altura de la pantalla */
+    margin-right: 10px; /* Margen derecho entre las imágenes */
+    border: 1px solid #ccc; /* Borde alrededor de las imágenes */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    main {
+        padding: 40px 10px; /* Reducir el espacio superior en dispositivos móviles */
+    }
+
+    .imagen-container {
+        flex-direction: column; /* Colocar las imágenes en una columna en dispositivos móviles */
+        align-items: center; /* Centrar verticalmente las imágenes en dispositivos móviles */
+    }
+
+    .imagen-catalogo {
+        width: 100%; /* Imágenes a pantalla completa en dispositivos móviles */
+        margin: 10px 0; /* Margen vertical entre las imágenes */
+    }
+}
